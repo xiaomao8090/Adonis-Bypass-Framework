@@ -39,9 +39,14 @@ This framework implements multiple layers of protection against AdonisAC detecti
 
 ### Direct Download
 
-**Raw Script Link:**
+**Raw Script Link (Copy this URL into your executor):**
 ```
 https://raw.githubusercontent.com/xiaomao8090/Adonis-Bypass-Framework/master/Adonis%E7%BB%95%E8%BF%871.lua
+```
+
+Or use this format in Lua:
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaomao8090/Adonis-Bypass-Framework/master/Adonis%E7%BB%95%E8%BF%871.lua"))()
 ```
 
 ### Manual Installation
