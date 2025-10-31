@@ -1,0 +1,6 @@
+*.luac
+*.lua~
+.DS_Store
+Thumbs.db
+*.log
+
