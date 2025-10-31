@@ -1,139 +1,96 @@
 # Adonis Bypass Framework
 
-A comprehensive multi-layered anti-cheat bypass framework for AdonisAC in Roblox.
+Multi-layer bypass for AdonisAC in Roblox.
+
+多层级 AdonisAC 绕过框架。
 
 **Version:** v1.0.2  
 **Author:** xiaomao  
+**QQ:** 1303323893  
 **QQ Group:** 154919631
 
-## ⚠️ Disclaimer
+---
 
-This project is for educational and research purposes only. The use of bypass scripts may violate Roblox's Terms of Service. Use at your own risk.
+## Features / 功能
 
-## 📋 Features
+- Remote interception with pattern matching / 远程拦截与模式匹配
+- Multi-layer kick protection / 多层踢出保护
+- Detected function hook / 检测函数钩子
+- Call stack spoofing / 调用栈伪装
+- GetGC rate limiting / GetGC 速率限制
+- GUI detection blocking / GUI 检测拦截
+- Behavior randomization / 行为随机化
 
-This framework implements multiple layers of protection against AdonisAC detection:
+## Installation / 安装
 
-- **Layer 1: Core Bypass Module** - Embedded bypass that hooks critical AdonisAC functions (currently disabled)
-- **Layer 2: Smart Delay System** - Waits for anti-cheat initialization before activation
-- **Layer 3: Metatable Protection** - Protects game metatables from detection
-- **Layer 4: Enhanced Remote Interception** - Blocks suspicious remote events with pattern matching and multi-layer kick protection
-- **Layer 5: Behavior Randomization** - Randomizes player behavior to avoid pattern detection
-- **Layer 6: Exploit Trace Hiding** - Removes common exploit identifiers
-- **Layer 8: Fake Lag System** - Simulates network latency patterns
-- **Layer 9: Safe GetGC Wrapper** - Limits garbage collector access frequency with rate limiting
-- **Layer 10: GUI Detection Blocking** - Intercepts and blocks detection GUI elements
-- **Layer 11: Call Stack Spoofing** - Masks external script call origins to avoid detection
-- **Layer 13: Enhanced Detected Hook** - Hooks AdonisAC's Detected function with improved safety and stability
+Just paste this in your executor:
 
-## 📦 Installation
+在你的执行器中粘贴以下代码：
 
-### Direct Download
-
-**Raw Script Link (Copy this URL into your executor):**
-```
-https://raw.githubusercontent.com/xiaomao8090/Adonis-Bypass-Framework/master/AdonisBypass.lua
-```
-
-Or use this format in Lua:
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaomao8090/Adonis-Bypass-Framework/master/AdonisBypass.lua"))()
 ```
 
-### Manual Installation
+Or download `AdonisBypass.lua` and execute it directly.
 
-1. Download the script file (`AdonisBypass.lua`)
-2. Execute in your Roblox executor
-3. Wait for the bypass framework to load
-4. Check console for loading progress messages
+或者下载 `AdonisBypass.lua` 文件直接执行。
 
-## 🔧 Configuration
-
-The script includes a configurable `CONFIG` table:
+## Config / 配置
 
 ```lua
 local CONFIG = {
-    DELAY = 12,              -- Wait time for anti-cheat initialization
-    HIDE_CONSOLE = false,    -- Hide console output
-    FAKE_LAG = true,         -- Enable fake lag simulation
-    BEHAVIOR_RANDOM = true,  -- Enable behavior randomization
-    BLOCK_REMOTES = true,    -- Enable remote interception
+    DELAY = 12,              -- 等待时间
+    HIDE_CONSOLE = false,    -- 隐藏控制台
+    FAKE_LAG = true,         -- 模拟延迟
+    BEHAVIOR_RANDOM = true,  -- 行为随机化
+    BLOCK_REMOTES = true,    -- 拦截远程事件
 }
 ```
 
-## ⚙️ Usage
+## Usage / 使用方法
 
-Simply execute the script in your Roblox executor. The script will:
+Execute the script before AdonisAC loads. Check console for progress messages.
 
-1. Wait for game to fully load
-2. Initialize all bypass layers sequentially
-3. Display progress messages in console
-4. Complete bypass setup automatically
+在 AdonisAC 加载前执行脚本。查看控制台获取进度信息。
 
-## 📝 Important Notes
+Layer 13 waits 5 seconds for Adonis to fully load before hooking.
 
-- The framework must be loaded before AdonisAC fully initializes
-- Some layers may take time to activate - be patient during the loading process
-- Layer 13 (Detected Hook) waits 5 seconds for Adonis to fully load before attempting hook
-- Layer 9 (GetGC Wrapper) limits calls to prevent detection
-- If bypass fails, check your executor's compatibility and support for required functions
-- This script is designed for educational purposes - use responsibly
+第 13 层会等待 5 秒确保 Adonis 完全加载后再进行钩子操作。
 
-## 🐛 Troubleshooting
+## Issues / 问题排查
 
-### Bypass Fails
-- Try reloading the script
-- Ensure you're using a compatible executor
-- Check console for error messages
+If bypass fails / 如果绕过失败：
+- Make sure you're using a compatible executor / 确保使用兼容的执行器
+- Try reloading the script / 尝试重新加载脚本
+- Check console for errors / 检查控制台错误信息
 
-### Script Crashes
-- Some executors may not support all features
-- Try disabling certain layers in CONFIG
+If script crashes / 如果脚本崩溃：
+- Some executors don't support all features / 某些执行器不支持所有功能
+- Try disabling layers in CONFIG / 尝试在 CONFIG 中禁用某些层
 
-## 📞 Support
+## Support / 支持
 
-For support, questions, or updates:
+QQ Group: 154919631
 
-- **QQ Group:** 154919631
-- **Author:** xiaomao
+## Changelog / 更新日志
 
-## 🔒 Security Notice
+**v1.0.2**
+- Enhanced remote interception / 增强远程拦截
+- Multi-layer kick protection / 多层踢出保护
+- Added call stack spoofing / 添加调用栈伪装
+- Improved Detected hook / 改进检测钩子
+- Better error handling / 更好的错误处理
 
-This script uses multiple layers of protection to avoid detection. All layers are implemented with proper error handling and safety checks.
+**v1.0.1**
+- Improved remote parameter modification / 改进远程参数修改
+- Better compatibility / 更好的兼容性
 
-For questions, support, or updates, please join our QQ group: **154919631**
+**v1.0.0**
+- Initial release / 初始版本
 
-## 📄 License
+## Credits / 致谢
 
-This project is provided as-is for educational purposes. No warranty is provided.
+External bypass from Jko-Scripts/Adonis-AC-Bypass
 
-## 🔄 Version History
-
-### v1.0.2
-- Enhanced Remote interception with suspicious pattern matching
-- Multi-layer Kick protection (3 methods)
-- Enabled safe GetGC wrapper with rate limiting
-- Added call stack spoofing (Layer 11)
-- Enhanced Detected Hook with improved safety (Layer 13)
-- Improved error handling across all layers
-- Better stability and performance optimizations
-
-### v1.0.1
-- Improved Remote parameter modification
-- Enhanced error handling
-- Better compatibility with different executors
-
-### v1.0.0
-- Initial release
-- Multi-layered bypass system
-- Comprehensive protection mechanisms
-
-## 🙏 Credits
-
-- **External Bypass:** Jko-Scripts/Adonis-AC-Bypass
-- **Framework Design:** xiaomao
-
----
-
-**Remember:** This tool is for educational purposes. Always respect game rules and terms of service.
+外部绕过代码来自 Jko-Scripts/Adonis-AC-Bypass
 
