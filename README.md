@@ -2,10 +2,9 @@
 
 A comprehensive multi-layered anti-cheat bypass framework for AdonisAC in Roblox.
 
-**Version:** v1.0.0  
+**Version:** v1.0.2  
 **Author:** xiaomao  
-**QQ Group:** 154919631  
-**Status:** Script is obfuscated for security
+**QQ Group:** 154919631
 
 ## ⚠️ Disclaimer
 
@@ -15,25 +14,17 @@ This project is for educational and research purposes only. The use of bypass sc
 
 This framework implements multiple layers of protection against AdonisAC detection:
 
-- **Layer 1: Core Bypass Module** - Embedded bypass that hooks critical AdonisAC functions
+- **Layer 1: Core Bypass Module** - Embedded bypass that hooks critical AdonisAC functions (currently disabled)
 - **Layer 2: Smart Delay System** - Waits for anti-cheat initialization before activation
 - **Layer 3: Metatable Protection** - Protects game metatables from detection
-- **Layer 4: Remote Interception** - Blocks suspicious remote events and kick attempts
+- **Layer 4: Enhanced Remote Interception** - Blocks suspicious remote events with pattern matching and multi-layer kick protection
 - **Layer 5: Behavior Randomization** - Randomizes player behavior to avoid pattern detection
 - **Layer 6: Exploit Trace Hiding** - Removes common exploit identifiers
-- **Layer 7: Console Hiding** - Optional console output suppression
 - **Layer 8: Fake Lag System** - Simulates network latency patterns
-- **Layer 9: GetGC Wrapper** - Limits garbage collector access frequency
+- **Layer 9: Safe GetGC Wrapper** - Limits garbage collector access frequency with rate limiting
 - **Layer 10: GUI Detection Blocking** - Intercepts and blocks detection GUI elements
-- **Layer 12: Connect Protection** - Wraps signal connections for protection
-
-## 🎨 UI Features
-
-- Modern dark-themed interface
-- Real-time progress bar
-- Status updates for each loading stage
-- Automatic UI dismissal upon completion
-- Author information display
+- **Layer 11: Call Stack Spoofing** - Masks external script call origins to avoid detection
+- **Layer 13: Enhanced Detected Hook** - Hooks AdonisAC's Detected function with improved safety and stability
 
 ## 📦 Installation
 
@@ -54,7 +45,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaomao8090/Adonis-By
 1. Download the script file (`AdonisBypass.lua`)
 2. Execute in your Roblox executor
 3. Wait for the bypass framework to load
-4. The UI will automatically close when loading is complete
+4. Check console for loading progress messages
 
 ## 🔧 Configuration
 
@@ -74,24 +65,21 @@ local CONFIG = {
 
 Simply execute the script in your Roblox executor. The script will:
 
-1. Display a loading UI
-2. Initialize all bypass layers
-3. Show real-time progress
-4. Automatically close the UI when complete
+1. Wait for game to fully load
+2. Initialize all bypass layers sequentially
+3. Display progress messages in console
+4. Complete bypass setup automatically
 
 ## 📝 Important Notes
 
-- **⚠️ Script is Obfuscated** - The source code has been obfuscated and optimized for performance and security reasons. This helps prevent detection and improves execution speed.
 - The framework must be loaded before AdonisAC fully initializes
 - Some layers may take time to activate - be patient during the loading process
+- Layer 13 (Detected Hook) waits 5 seconds for Adonis to fully load before attempting hook
+- Layer 9 (GetGC Wrapper) limits calls to prevent detection
 - If bypass fails, check your executor's compatibility and support for required functions
 - This script is designed for educational purposes - use responsibly
 
 ## 🐛 Troubleshooting
-
-### UI Not Showing
-- Ensure your executor supports UI creation
-- Check if PlayerGui is accessible
 
 ### Bypass Fails
 - Try reloading the script
@@ -111,11 +99,7 @@ For support, questions, or updates:
 
 ## 🔒 Security Notice
 
-**This script is obfuscated.** The source code has been processed to:
-- Prevent easy reverse engineering
-- Optimize execution performance
-- Reduce detection vectors
-- Protect implementation details
+This script uses multiple layers of protection to avoid detection. All layers are implemented with proper error handling and safety checks.
 
 For questions, support, or updates, please join our QQ group: **154919631**
 
@@ -125,10 +109,23 @@ This project is provided as-is for educational purposes. No warranty is provided
 
 ## 🔄 Version History
 
+### v1.0.2
+- Enhanced Remote interception with suspicious pattern matching
+- Multi-layer Kick protection (3 methods)
+- Enabled safe GetGC wrapper with rate limiting
+- Added call stack spoofing (Layer 11)
+- Enhanced Detected Hook with improved safety (Layer 13)
+- Improved error handling across all layers
+- Better stability and performance optimizations
+
+### v1.0.1
+- Improved Remote parameter modification
+- Enhanced error handling
+- Better compatibility with different executors
+
 ### v1.0.0
 - Initial release
 - Multi-layered bypass system
-- Modern UI interface
 - Comprehensive protection mechanisms
 
 ## 🙏 Credits
