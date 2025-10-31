@@ -37,7 +37,16 @@ This framework implements multiple layers of protection against AdonisAC detecti
 
 ## 📦 Installation
 
-1. Download the script file (`Adonis绕过.lua`)
+### Direct Download
+
+**Raw Script Link:**
+```
+https://raw.githubusercontent.com/xiaomao8090/Adonis-Bypass-Framework/master/Adonis%E7%BB%95%E8%BF%871.lua
+```
+
+### Manual Installation
+
+1. Download the script file (`Adonis绕过1.lua`)
 2. Execute in your Roblox executor
 3. Wait for the bypass framework to load
 4. The UI will automatically close when loading is complete
